@@ -1,5 +1,5 @@
 # bunce-revilla-fernandez-2026-age_uncert
-Analysis code for the publication:
+Analysis code for the manuscript:
 
 **Bunce, JA, C Revilla-Minaya, and CI Fernández (2026) Estimating mean growth trajectories when measurements are sparse and age is uncertain**.
 

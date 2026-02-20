@@ -6,7 +6,7 @@ Analysis code for the manuscript:
 <br/>
 Steps to reproduce the analysis:
 
-1) Create an project folder on your machine. Name it whatever you want. 
+1) Create a project folder on your machine. Name it whatever you want. 
 
 2) Inside this project folder, put the file ``RunAll.R`` and the file ``post_USMatsi.RDS``. 
 

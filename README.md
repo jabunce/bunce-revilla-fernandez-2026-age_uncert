@@ -8,7 +8,7 @@ Steps to reproduce the analysis:
 
 1) Create a project folder on your machine. Name it whatever you want. 
 
-2) Inside this project folder, put the file ``RunAll.R`` and the file ``post_USMatsi.RDS``. 
+2) Inside this project folder, put the file ``RunAll.R`` and the file ``I_cov_mat.RDS``. 
 
 3) Also inside the project folder, create three sub-folders named (exactly) ``Code``, ``Plots``, and ``Data``.
 

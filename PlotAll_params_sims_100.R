@@ -820,7 +820,7 @@ par(xpd=NA) # plotting clipped to device region
 
 # legend
 legtext <- c("Simulation", "Estimates", "Contrast")
-xcoords <- c(0, 5, 12) # 0, 7, 23
+xcoords <- c(0, 6, 12) # 0, 7, 23
 secondvector <- (1:length(legtext))-1
 textwidths <- xcoords/secondvector # this works for all but the first element
 textwidths[1] <- 0 # so replace element 1 with a finite number (any will do)

@@ -435,153 +435,65 @@ plot( x=0, y=8, type="n", ylim=c(0,10), xlim=c(0,10), axes=FALSE, ylab=NA, xlab=
 par(xpd=NA) # plotting clipped to device region
 
 # legend
-  # set horizontal spacing for legend text
-
-  legtext <- c("Observed data",
-               "Sim mean trajectory", 
-               "",
-               ""
+    legtext <- c("Observed data",
+               "Sim mean trajectory/velocity", 
+               "Estimated mean trajectory",
+               "Prior trajectory",
+               "Estimated mean velocity",
+               "Prior velocity"
                )
-  xcoords <- c(0,
-               4.5,  #4 #8.5 # moves third item right
-               8.5, #7.5 #24.2 # moves last item right
-               15  #36.8 # moves last three items together right
-               )
-  secondvector <- (1:length(legtext))-1
-  textwidths <- xcoords/secondvector # this works for all but the first element
-  textwidths[1] <- 3 #2 # moves last three items right  # so replace element 1 with a finite number (any will do)
 
-
-
-  legend(x=11, y=9.7, #-0.5, 12
-         ncol=4,
-         cex=1.3,
-         text.width=textwidths,
-         legend=legtext,
-         bty="n",
-         #bg="white",
-         col=c(MatPoint_col,
+    colors <- c(MatPoint_col,
                BerMeanTraj_col,
-               "white", #MatMeanTraj_col, 
-               "white" #PriorTraj_col
-              ),
-         merge=FALSE,
-         pch=c(MatPoint_pch,
-               NA, 
-               NA, 
-               NA
-               ),
-         lty=c(0,
-               BerMeanTraj_lty,
-               BerMeanTraj_lty,
-               PriorTraj_lty
-               ),
-         lwd=c(MatPoint_lwd,
-               BerMeanTraj_lwd,
-               MatMeanTraj_lwd,
-               PriorTraj_lwd
-               ),
-         seg.len=2 )
-
-
-  legtext <-c("Estimated mean trajectory",
-              "Prior trajectory",
-              "",
-              ""
-               )
-  xcoords <- c(0,
-               4.5,
-               8.5,
-               15
-               )
-  secondvector <- (1:length(legtext))-1
-  textwidths <- xcoords/secondvector # this works for all but the first element
-  textwidths[1] <- 3 # so replace element 1 with a finite number (any will do)
-
-
-  legend(x=11, y=9.2, #-0.5, 11.5
-         ncol=4,
-         cex=1.3,
-         text.width=textwidths,
-         legend=legtext,
-         bty="n",
-         #bg="white",
-         col=c(MatIndivTraj_col,
+               MatIndivTraj_col,
                PriorTraj_col,
-               "white",
-               NA
-              ),
-         merge=FALSE,
-         pch=c(NA, #MatPoint_pch,
-               NA, 
-               NA, 
-               NA
-               ),
-         lty=c(MatIndivTraj_lty,
-               PriorTraj_lty,
-               PriorTraj_lty,
-               NA
-               ),
-         lwd=c(MatIndivTraj_lwd,
-               PriorTraj_lwd,
-               PriorTraj_lwd,
-               NA
-               ),
-         seg.len=2 )
-
-
-
-  legtext <-c("Estimated mean velocity",
-              "Prior velocity" #,
-               #"Estimate run",
-               #""
+               MatVelTraj_col,
+               BerVelTraj_col
                )
-  xcoords <- c(0,
-               4.5 #,
-               #8.5,
-               #15
+
+    points <- c(MatPoint_pch,
+                NA,
+                NA,
+                NA,
+                NA,
+                NA
                )
-  secondvector <- (1:length(legtext))-1
-  textwidths <- xcoords/secondvector # this works for all but the first element
-  textwidths[1] <- 3 # so replace element 1 with a finite number (any will do)
+
+    ltype <- c(0,
+               BerMeanTraj_lty,
+               MatIndivTraj_lty,
+               PriorTraj_lty,
+               MatVelTraj_lty,
+               BerVelTraj_lty
+               )
+
+    lwidth <- c(MatPoint_lwd,
+                BerMeanTraj_lwd,
+                MatIndivTraj_lwd,
+                PriorTraj_lwd,
+                MatVelTraj_lwd,
+                BerVelTraj_lwd
+                )
 
 
-  legend(x=11, y=8.7,
-         ncol=4,
-         cex=1.3,
-         text.width=textwidths,
+  legend(x=12, y=8.7,
+         horiz=FALSE,
+         ncol=1,
+         cex=1.6,
+         #text.width=textwidths,
          legend=legtext,
-         bty="n",
+         bty="o",
+         box.lty=1,
+         box.lwd=1,
+         box.col="black",
          #bg="white",
-         col=c(MatVelTraj_col,
-               BerVelTraj_col #,
-               #MatIndivTraj_col,
-               #NA
-              ),
+         col=colors,
          merge=FALSE,
-         pch=c(NA, #MatPoint_pch,
-               NA #, 
-               #NA, 
-               #NA
-               ),
-         lty=c(MatVelTraj_lty,
-               BerVelTraj_lty #,
-               #MatIndivTraj_lty,
-               #NA
-               ),
-         lwd=c(MatVelTraj_lwd,
-               BerVelTraj_lwd #,
-               #MatIndivTraj_lwd,
-               #NA
-               ),
+         pch=points,
+         lty=ltype,
+         lwd=lwidth,
          seg.len=2 )
 
-
-  rect(xleft = 10.9, #-0.4
-       ybottom = 7.9, #10.7
-       xright = 22, #10.4
-       ytop = 9.65, #11.95
-       lwd=1)
 
 
   #par(xpd=NA) # clip plotting to device region

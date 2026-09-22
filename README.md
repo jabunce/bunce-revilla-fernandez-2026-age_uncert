@@ -1,7 +1,9 @@
 # bunce-revilla-fernandez-2026-age_uncert
-Analysis code for the manuscript:
+Analysis code for the publication:
 
-**Bunce, JA, C Revilla-Minaya, and CI Fernández (2026) Estimating mean growth trajectories when measurements are sparse and age is uncertain**.
+**Bunce, JA, C Revilla-Minaya, and CI Fernández (2026) Estimating mean growth trajectories when measurements are sparse and age is uncertain. American Journal of Biological Anthropology 191:e70358**, available open-access [here](https://onlinelibrary.wiley.com/doi/10.1002/ajpa.70358)
+
+The original preprint is on bioRXiv [here](https://www.biorxiv.org/content/10.64898/2026.02.24.707738v1)
 
 <br/>
 Steps to reproduce the analysis:
